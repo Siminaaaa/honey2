@@ -61,3 +61,79 @@ dots.forEach(function(dot, index) {
 
 
 showSlide(slideIndex);
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.search_form_sec6');
+    const input = document.querySelector('.search-form__field_sec6');
+    const button = document.querySelector('.search-form__submit_sec6');
+
+    function createError(text,input) {
+        const parent = input.parentNode;
+        const errorLabel = document.createElement('label')
+        parent.classList.add('error')
+        errorLabel.classList.add('error-label')
+        errorLabel.textContent = text
+        parent.appendChild(errorLabel)
+    }
+
+
+
+    function validateAndClearInput() {
+        const emailValue = input.value.trim();
+
+        if (input.value.trim() === '') { 
+          
+            input.style.borderColor = 'red';
+            createError("Поле не заполнено", input)
+        } else if (!emailValue.endsWith('@gmail.com')){
+            input.style.borderColor = 'red';
+            createError("Email должен заканчиваться на '@gmail.com'", input);
+        return;
+        }else {
+            input.style.borderColor = '';
+            input.value = ''; 
+            const errorLabels = document.querySelectorAll('.error-label');
+            errorLabels.forEach(function(label) {
+                label.remove();
+            });
+            alert("Форма успешно отправлена ")
+            }
+    }
+
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        validateAndClearInput();
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerBtn = document.getElementById('burgerBtn');
+    const pages = document.querySelector('.pages');
+    let isMenuVisible = false;
+  
+    function closeMenu() {
+      pages.classList.remove('visible');
+      isMenuVisible = false;
+    }
+  
+    burgerBtn.addEventListener('click', function(event) {
+      event.stopPropagation(); 
+      isMenuVisible = !isMenuVisible; 
+      if (isMenuVisible) {
+        pages.classList.add('visible')
+      } else {
+        closeMenu()
+      }
+    });
+    
+      document.addEventListener('click', function(event) {
+      if (isMenuVisible && !pages.contains(event.target) && event.target !== burgerBtn) {
+        closeMenu();
+      }
+    });
+  });
+  
