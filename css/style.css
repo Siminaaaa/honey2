@@ -586,20 +586,26 @@ body {
   background-color: #fccd3470;
   border-color: #7a5519;
   font-weight: bold;
+  width: 35px;
+  height: 35px;
+
+}
+.burger-icon{
+  width: 20px;
 }
 
 
 
 
 
-/*COMPUTER  */
+/*Comp  */
 @media screen and (min-width : 1024px) {
   .burger-icon {
     display: none;
   }
 }
 
-/* PLANSHED  */
+/* Plan  */
 
 @media screen and (min-width : 768px) and (max-width : 1023px) {
   .container{
@@ -678,7 +684,7 @@ body {
    }
 }
 
-/*  MOBILE  */
+/*  Mobile  */
 @media screen and (min-width : 340px) and (max-width : 768px) { 
   .container{
     width: 100%;

@@ -134,6 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
       if (isMenuVisible && !pages.contains(event.target) && event.target !== burgerBtn) {
         closeMenu();
       }
-    });
-  });
+    })
+  })
   
