@@ -260,12 +260,11 @@ body {
   margin: 0 auto;
 }
 
-.our {
+.our,.products {
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
 }
-
 .card {
   display: flex;
   gap: 30px;
@@ -421,7 +420,7 @@ body {
 .pic5 {
   width: 60%;
   margin-left: 250px;
-  /* align-items: center; */
+  
 }
 
 .pic5 img {
@@ -685,7 +684,7 @@ body {
 }
 
 /*  Mobile  */
-@media screen and (min-width : 340px) and (max-width : 768px) { 
+@media screen and (min-width : 340px) and (max-width : 768px) {
   .container{
     width: 100%;
   }
@@ -742,7 +741,9 @@ body {
     margin-bottom: 20px;
     /* display: none; */
   }
-
+  .products{
+    margin-left: -px;
+  }
   .nav__icon{
     margin-top: -50px;
   }
@@ -812,7 +813,7 @@ body {
     margin :0 auto;
    }
   .pic5{
-    margin-left: 65px;
+    margin-left: 100px;
     margin-bottom: 10px;
 
  }
@@ -860,4 +861,5 @@ body {
 }
  .last-med{
   display: none;
+}
 }
