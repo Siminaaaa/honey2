@@ -103,11 +103,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     button.addEventListener('click', function(event) {
-        event.preventDefault();
+        event.preventDefault()
 
-        validateAndClearInput();
-    });
-});
+        validateAndClearInput()
+    })
+})
 
 
 document.addEventListener('DOMContentLoaded', function() {
